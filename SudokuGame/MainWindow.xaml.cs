@@ -13,7 +13,7 @@ namespace SudokuGame
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Media;
-    using Microsoft.Win32;
+    using Microsoft.Win32;   
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -30,7 +30,7 @@ namespace SudokuGame
         /// </summary>
         public MainWindow()
         {
-            this.InitializeComponent();
+            this.InitializeComponent();            
         }
 
         /// <summary>
@@ -54,13 +54,13 @@ namespace SudokuGame
             this.activeGameState.ArrPuzzleSolution = new string[9, 9];
             this.activeGameState.ArrPuzzleBase = new string[9, 9];
             this.activeGameState.ArrPuzzleCurrent = new string[9, 9];
-            StreamReader puzzleReader = File.OpenText(@"..\..\SudokuPuzzleSolutions.txt");
+            StreamReader puzzleReader = File.OpenText(@"..\..\..\SudokuPuzzleSolutions.txt");
 
             // Summary
             // Count lines that aren't empty &
             // Calculate how many puzzles there
             // Summary
-            int totalLines = File.ReadLines(@"..\..\SudokuPuzzleSolutions.txt").Count(line => !string.IsNullOrWhiteSpace(line));
+            int totalLines = File.ReadLines(@"..\..\..\SudokuPuzzleSolutions.txt").Count(line => !string.IsNullOrWhiteSpace(line));
             int numOfPuzzles = totalLines / 9;
 
             // Summary
@@ -301,8 +301,8 @@ namespace SudokuGame
 
             while (i < startNum)
             {
-                int x = randomNum.Next(0, 8);
-                int y = randomNum.Next(0, 8);
+                int x = randomNum.Next(0, 9);
+                int y = randomNum.Next(0, 9);
                 if (string.IsNullOrWhiteSpace(this.activeGameState.ArrPuzzleBase[x, y]))
                 {
                     this.activeGameState.ArrPuzzleBase[x, y] = this.activeGameState.ArrPuzzleSolution[x, y];
