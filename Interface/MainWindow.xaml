@@ -5,9 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="MainWindow" Height="310.857" Width="428.815">
+        Title="Game Selection" Height="306.26" Width="593.844" ResizeMode="NoResize" Activated="RefreshData">
     <Grid Margin="0,0,0,0">
-        <Button x:Name="sudokuButton" Content="Play Sudoku" HorizontalAlignment="Left" VerticalAlignment="Top" Width="197" Height="53" Margin="119,76,0,0" Click="SudokuButton_Click"/>
-        <Button x:Name="mancalaButton" Content="Play Mancala" HorizontalAlignment="Left" VerticalAlignment="Top" Width="197" Margin="119,149,0,0" Height="53" Click="MancalaButton_Click"/>
+        <Button x:Name="sudokuButton" Content="Play Sudoku" HorizontalAlignment="Left" VerticalAlignment="Top" Width="197" Height="53" Margin="38,23,0,0" Click="SudokuButton_Click"/>
+        <Button x:Name="mancalaButton" Content="Play Mancala" HorizontalAlignment="Left" VerticalAlignment="Top" Width="198" Margin="319,24,0,0" Height="52" Click="MancalaButton_Click"/>
+        <Button x:Name="resetMancala" Content="Reset Mancala Data" HorizontalAlignment="Left" Margin="359,82,0,0" VerticalAlignment="Top" Width="116" Click="ResetMancala_Click"/>
+        <Grid x:Name="MancalaDataGrid" Margin="271,106,7,0" Height="119" VerticalAlignment="Top">
+            <Label x:Name="gamesPlayedLabel" Content="Total Games Played:" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="gamesPlayedLabel_Count" Content="" HorizontalAlignment="Left" Margin="115,1,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="playerVsAILabel" Content="Player vs AI:" HorizontalAlignment="Left" Margin="42,78,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="playerVsAILabel_Count" Content="" HorizontalAlignment="Left" Margin="115,78,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="AIvsAILabel" Content="AI vs AI:" HorizontalAlignment="Left" Margin="63,52,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="AIvsAILabel_Count" Content="" HorizontalAlignment="Left" Margin="115,52,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="PvPLabel" Content="Player vs Player:" HorizontalAlignment="Left" Margin="21,27,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="PvPLabel_Count" Content="" HorizontalAlignment="Left" Margin="115,27,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="Player1WinsLabel" Content="Player 1 Wins:" HorizontalAlignment="Left" Margin="177,1,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="Player1WinsLabel_Count" Content="" HorizontalAlignment="Left" Margin="266,0,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="Player2WinsLabel" Content="Player 2 Wins:" HorizontalAlignment="Left" Margin="177,27,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="Player2WinsLabel_Count" Content="" HorizontalAlignment="Left" Margin="266,26,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="AiWinsvsPlayerLabel" Content="AI Wins vs Player:" HorizontalAlignment="Left" Margin="159,53,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="AiWinsvsPlayerLabel_Count" Content="" HorizontalAlignment="Left" Margin="266,52,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="PlayerWinsVsAILabel" Content="Player Wins vs AI:" HorizontalAlignment="Left" Margin="159,79,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="PlayerWinsVsAILabel_Count" Content="" HorizontalAlignment="Left" Margin="266,78,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="489,238,0,0" VerticalAlignment="Top" Width="75" Click="ExitButton_Click"/>
     </Grid>
 </Window>

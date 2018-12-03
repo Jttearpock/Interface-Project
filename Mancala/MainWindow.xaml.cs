@@ -6,6 +6,7 @@
 
 namespace Mancala
 {
+    using System.IO;
     using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Controls;
@@ -130,6 +131,7 @@ namespace Mancala
                 this.UpdateValues();
                 if (this.currentGame.ArrGameBoard[6] > this.currentGame.ArrGameBoard[13])
                 {
+                    this.SaveResults(this.playerOne, this.playerTwo);
                     MessageBox.Show(this.playerOne.Name + " wins!");
                     PlayerOneTurnLabel.Content = this.playerOne.Name + " wins!";
                     PlayerOneTurnLabel.Foreground = Brushes.Firebrick;
@@ -139,6 +141,7 @@ namespace Mancala
                 }
                 else if (this.currentGame.ArrGameBoard[13] > this.currentGame.ArrGameBoard[6])
                 {
+                    this.SaveResults(this.playerTwo, this.playerOne);
                     MessageBox.Show(this.playerTwo.Name + " wins!");
                     PlayerTwoTurnLabel.Content = this.playerTwo.Name + " wins!";
                     PlayerTwoTurnLabel.Foreground = Brushes.Firebrick;
@@ -710,6 +713,78 @@ namespace Mancala
             if (playerTwoAiCheckBox.IsChecked == false)
             {
                 playerTwoAiMenu.IsEnabled = false;
+            }
+        }
+
+        /// <summary>
+        /// Save Results to file for interface to read
+        /// </summary>
+        /// <param name="winner">Winning Player.</param>
+        /// <param name="loser">Losing Player</param>
+        private void SaveResults(Player winner, Player loser)
+        {
+            int gamesPlayed;
+            int computerVsComputer;
+            int playerVSai;
+            int playerVsPlayer;
+            int player1Wins;
+            int player2Wins;
+            int computerWins;
+            int playerWins; 
+
+            using (StreamReader readFile = File.OpenText(@"MancalaSaveData.txt"))
+            {
+                gamesPlayed = int.Parse(readFile.ReadLine());    // Total Games Player       
+                computerVsComputer = int.Parse(readFile.ReadLine());    // AI vs AI games
+                playerVSai = int.Parse(readFile.ReadLine());  // Player vs AI games
+                playerVsPlayer = int.Parse(readFile.ReadLine());   // Player vs Player games
+                player1Wins = int.Parse(readFile.ReadLine());
+                player2Wins = int.Parse(readFile.ReadLine());
+                computerWins = int.Parse(readFile.ReadLine()); // AI wins vs Player
+                playerWins = int.Parse(readFile.ReadLine()); // Player wins vs AI
+
+                gamesPlayed++;
+
+                if (winner.IsAi == true && loser.IsAi == true)
+                {
+                    computerVsComputer++;
+                }
+                else if (winner.IsAi == true || loser.IsAi == true)
+                {
+                    playerVSai++;
+                    if (winner.IsAi == true)
+                    {
+                        computerWins++;
+                    }
+                    else
+                    {
+                        playerWins++;
+                    }
+                }
+                else
+                {
+                    playerVsPlayer++;
+                }
+                if (winner == this.playerOne)
+                {
+                    player1Wins++;
+                }
+                else
+                {
+                    player2Wins++;
+                }
+            }
+
+            using (StreamWriter saveResults = new StreamWriter(@"MancalaSaveData.txt", false))
+            {
+                saveResults.WriteLine(gamesPlayed);
+                saveResults.WriteLine(computerVsComputer);
+                saveResults.WriteLine(playerVSai);
+                saveResults.WriteLine(playerVsPlayer);
+                saveResults.WriteLine(player1Wins);
+                saveResults.WriteLine(player2Wins);
+                saveResults.WriteLine(computerWins);
+                saveResults.WriteLine(playerWins);
             }
         }
     }
