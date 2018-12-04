@@ -100,6 +100,10 @@ namespace Interface
             // This method runs whenever the window regains focus or opens
             using (StreamReader readFile = File.OpenText(@"SudokuSaveData.txt"))
             {
+                EasyWins_Count.Content = readFile.ReadLine();
+                MediumWins_Count.Content = readFile.ReadLine();
+                HardWins_Count.Content = readFile.ReadLine();
+                ExpertWins_Count.Content = readFile.ReadLine();
             }
         }
 
@@ -139,6 +143,27 @@ namespace Interface
             }
         }
 
+        /// <summary>
+        /// Reset Sudoku Data
+        /// </summary>
+        /// <param name="sender">The object that initiated the event.</param>
+        /// <param name="e">The event arguments for the event.</param>
+        private void ResetSudoku_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Reset all saved statistics for Sudoku?", "Confirm", MessageBoxButton.YesNo) ==
+                MessageBoxResult.Yes)
+            {
+                StreamWriter resetdata = new StreamWriter("@SudokuSavedData.txt");
+                resetdata.WriteLine(0);
+                resetdata.WriteLine(0);
+                resetdata.WriteLine(0);
+                resetdata.WriteLine(0);
+                resetdata.Close();
+                this.LoadData();
+            }
+
+
+        }
         /// <summary>
         /// Exit the application
         /// </summary>

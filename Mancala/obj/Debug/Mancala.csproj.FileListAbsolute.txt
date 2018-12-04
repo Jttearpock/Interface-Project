@@ -97,3 +97,17 @@ D:\Users\John\Documents\NWTC\Part 2 C#\Interface-Project\Mancala\obj\Debug\Manca
 D:\Users\John\Documents\NWTC\Part 2 C#\Interface-Project\Mancala\obj\Debug\Mancala.csproj.CoreCompileInputs.cache
 D:\Users\John\Documents\NWTC\Part 2 C#\Interface-Project\Mancala\obj\Debug\Mancala.exe
 D:\Users\John\Documents\NWTC\Part 2 C#\Interface-Project\Mancala\obj\Debug\Mancala.pdb
+D:\Sudoku-Game\Interface-Project\Mancala\bin\Debug\Mancala.exe.config
+D:\Sudoku-Game\Interface-Project\Mancala\bin\Debug\Mancala.exe
+D:\Sudoku-Game\Interface-Project\Mancala\bin\Debug\Mancala.pdb
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\Mancala.csprojResolveAssemblyReference.cache
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\MainWindow.g.cs
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\App.g.cs
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\Mancala_MarkupCompile.cache
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\Mancala_MarkupCompile.lref
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\MainWindow.baml
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\Mancala.g.resources
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\Mancala.Properties.Resources.resources
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\Mancala.csproj.GenerateResource.Cache
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\Mancala.exe
+D:\Sudoku-Game\Interface-Project\Mancala\obj\Debug\Mancala.pdb

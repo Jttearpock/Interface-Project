@@ -260,6 +260,10 @@ namespace SudokuGame
                 }
             }
         }
+        /// <summary>
+        /// Difficulty variable
+        /// </summary
+        public string difficulty;
 
         /// <summary>
         /// Find and set difficulty level based on selected radio button
@@ -270,21 +274,25 @@ namespace SudokuGame
             {
                 this.activeGameState.DifficultyLevel = "Easy";
                 this.activeGameState.StartNumbers = 32;
+                difficulty = "Easy";
             }
             else if (mediumDiffRadio.IsChecked == true)
             {
                 this.activeGameState.DifficultyLevel = "Medium";
                 this.activeGameState.StartNumbers = 30;
+                difficulty = "Medium";
             }
             else if (hardDiffRadio.IsChecked == true)
             {
                 this.activeGameState.DifficultyLevel = "Hard";
                 this.activeGameState.StartNumbers = 27;
+                difficulty = "Hard";
             }
             else if (expertDiffRadio.IsChecked == true)
             {
                 this.activeGameState.DifficultyLevel = "Expert";
                 this.activeGameState.StartNumbers = 24;
+                difficulty = "Expert";
             }
 
             puzzleLabel.Content = this.activeGameState.DifficultyLevel + " Puzzle";
@@ -742,6 +750,60 @@ namespace SudokuGame
                 if (gameWin == true)
                 {
                     puzzleLabel.Content = "You've Won!";
+                    int easy;
+                    int medium;
+                    int hard;
+                    int expert;
+
+                    StreamReader sudokuwins = File.OpenText(@"SudokuSaveData.txt");
+                    easy = int.Parse(sudokuwins.ReadLine());
+                    medium = int.Parse(sudokuwins.ReadLine());
+                    hard = int.Parse(sudokuwins.ReadLine());
+                    expert = int.Parse(sudokuwins.ReadLine());
+                    sudokuwins.Close();
+
+                    if (difficulty == "Easy")
+                    {
+                        StreamWriter savewins = new StreamWriter(@"SudokuSaveData.txt");
+                        easy++;
+                        savewins.WriteLine(easy);
+                        savewins.WriteLine(medium);
+                        savewins.WriteLine(hard);
+                        savewins.WriteLine(expert);
+                        savewins.Close();
+                    }
+
+                    else if (difficulty == "Medium")
+                    {
+                        StreamWriter savewins = new StreamWriter(@"SudokuSaveData.txt");
+                        medium++;
+                        savewins.WriteLine(easy);
+                        savewins.WriteLine(medium);
+                        savewins.WriteLine(hard);
+                        savewins.WriteLine(expert);
+                        savewins.Close();
+                    }
+                    else if (difficulty == "Hard")
+                    {
+                        StreamWriter savewins = new StreamWriter(@"SudokuSaveData.txt");
+                        hard++;
+                        savewins.WriteLine(easy);
+                        savewins.WriteLine(medium);
+                        savewins.WriteLine(hard);
+                        savewins.WriteLine(expert);
+                        savewins.Close();
+                    }
+                    else if (difficulty == "Expert")
+                    {
+                        StreamWriter savewins = new StreamWriter(@"SudokuSaveData.txt");
+                        expert++;
+                        savewins.WriteLine(easy);
+                        savewins.WriteLine(medium);
+                        savewins.WriteLine(hard);
+                        savewins.WriteLine(expert);
+                        savewins.Close();
+                    }
+
                 }
             }
         }
