@@ -153,17 +153,17 @@ namespace Interface
             if (MessageBox.Show("Reset all saved statistics for Sudoku?", "Confirm", MessageBoxButton.YesNo) ==
                 MessageBoxResult.Yes)
             {
-                StreamWriter resetdata = new StreamWriter("@SudokuSavedData.txt");
+                StreamWriter resetdata = new StreamWriter(@"SudokuSaveData.txt");
                 resetdata.WriteLine(0);
                 resetdata.WriteLine(0);
                 resetdata.WriteLine(0);
                 resetdata.WriteLine(0);
                 resetdata.Close();
-                this.LoadData();
             }
 
-
+            this.LoadData();
         }
+
         /// <summary>
         /// Exit the application
         /// </summary>

@@ -1,4 +1,10 @@
-﻿namespace Interface
+﻿//-----------------------------------------------------------------------
+// <copyright file="App.xaml.cs" company="CompanyName">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
+
+namespace Interface
 {
     using System;
     using System.Collections.Generic;

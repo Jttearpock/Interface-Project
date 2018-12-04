@@ -73,7 +73,7 @@
     <timestamps>
       <styleCop>2018/11/26 12:06:41.746</styleCop>
       <settingsFile>2018/11/26 12:06:41.717</settingsFile>
-      <sourceFile>2018/12/03 15:19:06.463</sourceFile>
+      <sourceFile>2018/12/04 11:49:56.733</sourceFile>
       <parser>2018/11/26 12:06:41.746</parser>
       <StyleCop.CSharp.DocumentationRules>2018/11/26 12:06:41.746</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>441727244</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -91,14 +91,9 @@
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
     <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
-        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementDocumentationMustBeSpelledCorrectly" ruleCheckId="SA1650">
         <context>The documentation text within the summary tag contains incorrectly spelled words: 'xaml'</context>
-        <line>14</line>
+        <line>20</line>
         <warning>False</warning>
       </violation>
     </violations>
@@ -107,7 +102,7 @@
     <timestamps>
       <styleCop>2018/11/26 12:06:41.746</styleCop>
       <settingsFile>2018/11/26 12:06:41.717</settingsFile>
-      <sourceFile>2018/12/03 15:18:45.815</sourceFile>
+      <sourceFile>2018/12/04 11:50:12.735</sourceFile>
       <parser>2018/11/26 12:06:41.746</parser>
       <StyleCop.CSharp.DocumentationRules>2018/11/26 12:06:41.746</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>441727244</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -142,7 +137,7 @@
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementDocumentationMustBeSpelledCorrectly" ruleCheckId="SA1650">
         <context>The documentation text within the summary tag contains incorrectly spelled words: 'Mancala'</context>
-        <line>121</line>
+        <line>125</line>
         <warning>False</warning>
       </violation>
     </violations>

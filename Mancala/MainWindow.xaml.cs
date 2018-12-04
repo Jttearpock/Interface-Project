@@ -765,6 +765,7 @@ namespace Mancala
                 {
                     playerVsPlayer++;
                 }
+
                 if (winner == this.playerOne)
                 {
                     player1Wins++;

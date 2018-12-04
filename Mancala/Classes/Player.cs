@@ -125,7 +125,7 @@ namespace Mancala
         /// </summary>
         /// <param name="currentBoard">The first name to join.</param>
         /// <param name="playerOneTurn">The last name to join.</param>
-        /// <returns>Int of position of move</returns>       
+        /// <returns>Integer of position of move</returns>       
         public int FindBestMove(int[] currentBoard, bool? playerOneTurn)
         {
             if (playerOneTurn == true)

@@ -192,14 +192,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="-317776965">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="MainWindow.xaml.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2018/11/26 12:06:41.746</styleCop>
       <settingsFile>2018/11/26 12:06:41.717</settingsFile>
-      <sourceFile>2018/12/03 15:22:54.316</sourceFile>
+      <sourceFile>2018/12/04 11:52:37.063</sourceFile>
       <parser>2018/11/26 12:06:41.746</parser>
       <StyleCop.CSharp.DocumentationRules>2018/11/26 12:06:41.746</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>441727244</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -222,16 +219,9 @@
         <line>21</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="DocumentationMustContainValidXml" ruleCheckId="SA1603">
-        <context>The documentation header is composed of invalid Xml: An error occurred while parsing EntityName. Line 3, position 32.</context>
-        <line>319</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="DocumentationMustContainValidXml" ruleCheckId="SA1603">
-        <context>The documentation header is composed of invalid Xml: An error occurred while parsing EntityName. Line 2, position 32.</context>
-        <line>805</line>
-        <warning>False</warning>
-      </violation>
     </violations>
   </sourcecode>
+  <project key="-317776965">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
 </stylecopresultscache>

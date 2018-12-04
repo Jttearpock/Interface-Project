@@ -29,14 +29,14 @@
             <Label x:Name="PlayerWinsVsAILabel_Count" Content="" HorizontalAlignment="Left" Margin="266,78,0,0" VerticalAlignment="Top"/>
         </Grid>
         <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="489,238,0,0" VerticalAlignment="Top" Width="75" Click="ExitButton_Click"/>
-        <Label x:Name="EasyWins" Content="Easy Difficulty Wins:" HorizontalAlignment="Left" Margin="31,107,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="MediumWins" Content="Medium Difficulty Wins:" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="HardWins" Content="Hard Difficulty Wins:" HorizontalAlignment="Left" Margin="28,159,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ExpertWins" Content="Expert Difficulty Wins:" HorizontalAlignment="Left" Margin="21,185,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="EasyWins_Count" Content="" HorizontalAlignment="Left" Margin="151,107,0,0" VerticalAlignment="Top" Width="20"/>
-        <Label x:Name="MediumWins_Count" Content="" HorizontalAlignment="Left" Margin="151,133,0,0" VerticalAlignment="Top" Width="20"/>
-        <Label x:Name="HardWins_Count" Content="" HorizontalAlignment="Left" Margin="151,159,0,0" VerticalAlignment="Top" Width="20"/>
-        <Label x:Name="ExpertWins_Count" Content="" HorizontalAlignment="Left" Margin="151,185,0,0" VerticalAlignment="Top" Width="20"/>
+        <Label x:Name="EasyWins" Content="Easy Difficulty Wins:" HorizontalAlignment="Left" Margin="68,108,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="MediumWins" Content="Medium Difficulty Wins:" HorizontalAlignment="Left" Margin="47,134,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="HardWins" Content="Hard Difficulty Wins:" HorizontalAlignment="Left" Margin="65,160,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ExpertWins" Content="Expert Difficulty Wins:" HorizontalAlignment="Left" Margin="58,186,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="EasyWins_Count" Content="" HorizontalAlignment="Left" Margin="188,108,0,0" VerticalAlignment="Top" Width="20"/>
+        <Label x:Name="MediumWins_Count" Content="" HorizontalAlignment="Left" Margin="188,134,0,0" VerticalAlignment="Top" Width="20"/>
+        <Label x:Name="HardWins_Count" Content="" HorizontalAlignment="Left" Margin="188,160,0,0" VerticalAlignment="Top" Width="20"/>
+        <Label x:Name="ExpertWins_Count" Content="" HorizontalAlignment="Left" Margin="188,186,0,0" VerticalAlignment="Top" Width="20"/>
         <Button x:Name="ResetSudoku" Content="Reset Sudoku Data" HorizontalAlignment="Left" Margin="84,81,0,0" VerticalAlignment="Top" Width="108" Click="ResetSudoku_Click"/>
     </Grid>
 </Window>

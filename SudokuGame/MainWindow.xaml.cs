@@ -21,6 +21,11 @@ namespace SudokuGame
     public partial class MainWindow : Window
     {
         /// <summary>
+        /// Difficulty variable
+        /// </summary>
+        private string difficulty;
+
+        /// <summary>
         /// Instantiate the activeGameState GameState class
         /// </summary>
         private GameState activeGameState = new GameState();
@@ -260,10 +265,6 @@ namespace SudokuGame
                 }
             }
         }
-        /// <summary>
-        /// Difficulty variable
-        /// </summary
-        public string difficulty;
 
         /// <summary>
         /// Find and set difficulty level based on selected radio button
@@ -274,25 +275,25 @@ namespace SudokuGame
             {
                 this.activeGameState.DifficultyLevel = "Easy";
                 this.activeGameState.StartNumbers = 32;
-                difficulty = "Easy";
+                this.difficulty = "Easy";
             }
             else if (mediumDiffRadio.IsChecked == true)
             {
                 this.activeGameState.DifficultyLevel = "Medium";
                 this.activeGameState.StartNumbers = 30;
-                difficulty = "Medium";
+                this.difficulty = "Medium";
             }
             else if (hardDiffRadio.IsChecked == true)
             {
                 this.activeGameState.DifficultyLevel = "Hard";
                 this.activeGameState.StartNumbers = 27;
-                difficulty = "Hard";
+                this.difficulty = "Hard";
             }
             else if (expertDiffRadio.IsChecked == true)
             {
                 this.activeGameState.DifficultyLevel = "Expert";
                 this.activeGameState.StartNumbers = 24;
-                difficulty = "Expert";
+                this.difficulty = "Expert";
             }
 
             puzzleLabel.Content = this.activeGameState.DifficultyLevel + " Puzzle";
@@ -322,7 +323,7 @@ namespace SudokuGame
 
         /// <summary>
         /// Method for setting the game board Cells equal to the current game array
-        /// Also assigns correct settings & event handlers to each Cell
+        /// Also assigns correct settings and event handlers to each Cell
         /// </summary>
         public void SetGameBoard()
         {
@@ -762,7 +763,7 @@ namespace SudokuGame
                     expert = int.Parse(sudokuwins.ReadLine());
                     sudokuwins.Close();
 
-                    if (difficulty == "Easy")
+                    if (this.difficulty == "Easy")
                     {
                         StreamWriter savewins = new StreamWriter(@"SudokuSaveData.txt");
                         easy++;
@@ -772,8 +773,7 @@ namespace SudokuGame
                         savewins.WriteLine(expert);
                         savewins.Close();
                     }
-
-                    else if (difficulty == "Medium")
+                    else if (this.difficulty == "Medium")
                     {
                         StreamWriter savewins = new StreamWriter(@"SudokuSaveData.txt");
                         medium++;
@@ -783,7 +783,7 @@ namespace SudokuGame
                         savewins.WriteLine(expert);
                         savewins.Close();
                     }
-                    else if (difficulty == "Hard")
+                    else if (this.difficulty == "Hard")
                     {
                         StreamWriter savewins = new StreamWriter(@"SudokuSaveData.txt");
                         hard++;
@@ -793,7 +793,7 @@ namespace SudokuGame
                         savewins.WriteLine(expert);
                         savewins.Close();
                     }
-                    else if (difficulty == "Expert")
+                    else if (this.difficulty == "Expert")
                     {
                         StreamWriter savewins = new StreamWriter(@"SudokuSaveData.txt");
                         expert++;
@@ -803,7 +803,6 @@ namespace SudokuGame
                         savewins.WriteLine(expert);
                         savewins.Close();
                     }
-
                 }
             }
         }
@@ -860,7 +859,7 @@ namespace SudokuGame
         }
 
         /// <summary>
-        /// Method to validate text input & add it to Current Array
+        /// Method to validate text input and add it to Current Array
         /// </summary>
         /// <param name="sender">The object that initiated the event.</param>
         /// <param name="e">The event arguments for the event.</param> 
