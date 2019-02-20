@@ -30,3 +30,12 @@ I was responsible for the comment markups on the project and was the final check
 Mancala was a five week group project to create from scratch a working Mancala game.
 
 ### What I did
+
+#### Classes
+As with Sudoku, the Gamestate class holds the information pertaining to the current game being played. The difference here being Player specific information is held within the Player class. While I created the Gamestate class, the Player class was also contributed to by my partners. However it was myself and one other team member who created the FindBestMove() and SelectMove() for the Hard AI.
+
+#### Player Moves & AI
+I was responsible for all methods that had to do with a player, human or AI, taking a move. These include ConfirmMove(), CheckEndingPosition(), IsAiTurn(), TakeAiTurn(), as well as the previously mentioned methods under the Player class.
+
+#### StyleCop 
+Also as with Sudoku I was responsible for the comment markups on the project and was the final check to make sure the assignment was working before the it was turned in.
