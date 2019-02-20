@@ -11,6 +11,21 @@ Sudoku was a two week group project to create from scratch a working sudoku game
 
 ### What I did
 
+#### GameState Class
+The only custom class used in the project it holds all the information pertaining to the current game being played. 
+
+#### Puzzle Creation
+I was responsible for the creation of puzzles when a new game was started using a series of methods that run under CreateNewGame(), minus SetDifficulty().
+
+#### Save & Load Functionality 
+The SaveGame(), OpenGameFile() and LoadGameFile() methods were also created by myself. 
+
+#### Data Validation
+Validation was needed to ensure the player only typed a valid number (1-9) which was done using GameCellTextChange(). I also helped create similar validation for InsertNumber(). InsertNumber() was using to either overwrite the number in the current cell or add an extra number to it as a note depending.
+
+#### StyleCop 
+I was responsible for the comment markups on the project and was the final check to make sure the assignment was working before the it was turned in.
+
 ## Mancala - Game 2
 Mancala was a five week group project to create from scratch a working Mancala game.
 
